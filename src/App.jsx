@@ -2,7 +2,8 @@ import { Routes, Route, Link } from "@solidjs/router"
 import { styled } from "solid-styled-components";
 import ScrollReveal from 'scrollreveal';
 import { createEffect, onMount, createSignal, For } from "solid-js";
-import { gsap } from 'gsap'
+import { gsap } from 'gsap';
+import useScrollPosition from "./hooks/useScrollPosition";
 // <For each={todos}>{todo => <Todo todo={todo} />}</For>;
 
 
@@ -34,8 +35,11 @@ function Page() {
 function Home() {
 
   const [open, setOpen] = createSignal(false)
+  const scroll = useScrollPosition()
 
   createEffect(() => ScrollReveal().reveal('.headline'))
+
+  createEffect(() => console.log(scroll()))
 
   // Example, to be implemented..
   const hoverAnimation = (el, _accessor) => {
