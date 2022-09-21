@@ -29,16 +29,33 @@ export const Nav = styled("nav")`
 
 
 const Navbar = () => {
-    return (
-    <Nav>
-        <div>
-            <NavLink href='/'> Home </NavLink>
-        </div>
-        <div>
-            <NavLink href='/about'> About </NavLink>
-        </div>
-    </Nav>
-  )
+  return (
+        <Nav>
+            <div>
+                <NavLink href='/'> Home </NavLink>
+            </div>
+            <div>
+                <NavLink href='/about'> About </NavLink>
+            </div>
+        </Nav>
+      )
+
 }
 
+
 export default Navbar
+
+// const Navbar = () => {
+//     return (
+//     <div>
+//         <div>
+//             <NavLink href='/'> Home </NavLink>
+//         </div>
+//         <div>
+//             <NavLink href='/about'> About </NavLink>
+//         </div>
+//     </div>
+//   )
+// }
+
+// export default Navbar

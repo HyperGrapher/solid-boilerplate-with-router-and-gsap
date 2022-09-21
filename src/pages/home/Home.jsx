@@ -1,6 +1,6 @@
 import { Link } from "@solidjs/router"
 import ScrollReveal from 'scrollreveal';
-import { createEffect, onMount, createSignal, For } from "solid-js";
+import { createEffect, onMount, createSignal, For, Show  } from "solid-js";
 import { gsap } from 'gsap';
 import useScrollPosition from "../../hooks/useScrollPosition";
 import { Button } from '../../components/styled/Button';
@@ -67,10 +67,13 @@ export default function Home() {
           height: '100vh'
         }}>
           <Button onClick={() => setOpen(!open())}>{open() ? 'Hide' : 'Show'}</Button>
-          <div style={{ margin: '5rem 1rem ', visibility: 'hidden' }} use:animation >
-            <h1>HELLO</h1>
-          </div>
-          <h1>HELLO</h1>
+
+          <Show when={open()} fallback={<div>Hidden</div>}>
+            <div style={{ margin: '5rem 1rem ', visibility: 'hidden' }} use:animation >
+              <h1>HELLO</h1>
+            </div>
+          </Show>
+
         </nav>
   
         <h1 class="headline">
