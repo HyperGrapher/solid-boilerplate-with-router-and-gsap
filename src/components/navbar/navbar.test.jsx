@@ -1,5 +1,5 @@
-import { describe, expect, test, it } from 'vitest';
-import { render, fireEvent, screen } from 'solid-testing-library';
+import { describe, expect, it } from 'vitest';
+import { render, screen } from 'solid-testing-library';
 import { Router } from "@solidjs/router"
 
 import Navbar from './Navbar';

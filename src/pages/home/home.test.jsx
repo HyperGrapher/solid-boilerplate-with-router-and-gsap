@@ -1,10 +1,16 @@
-import { describe, expect, test, it } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { render, fireEvent, screen } from 'solid-testing-library';
 import { Router } from "@solidjs/router"
 
 import Home from './Home';
 
 describe('<Home />', () => {
+
+    it("should assert document title as expected", () => {
+      render(() => <Router><Home /></Router>);
+      expect(document.title).toEqual("Solid - Home")
+	});
+
 
     it("should assert 'Home Page' element exists.", () => {
       render(() => <Router><Home /></Router>);

@@ -1,6 +1,4 @@
-import { Routes, Route, Link } from "@solidjs/router"
-import { createEffect, onMount, createSignal, For } from "solid-js";
-import { Button } from '../../components/styled/Button';
+import { createEffect} from "solid-js";
 
 export default function About() {
 
@@ -8,8 +6,8 @@ export default function About() {
 
 
     return (
-        <div style={{ height: '250vh' }}>
-        <h1>About Page</h1>
+        <div>
+            <h1>About Page</h1>
         </div>
     );
 }

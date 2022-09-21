@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Link } from "@solidjs/router"
 import ScrollReveal from 'scrollreveal';
 import { createEffect, onMount, createSignal, For, Show  } from "solid-js";
