@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import { Link } from "@solidjs/router"
-import ScrollReveal from 'scrollreveal';
 import { createEffect, onMount, createSignal, For, Show  } from "solid-js";
 import { gsap } from 'gsap';
 import useScrollPosition from "../../hooks/useScrollPosition";
@@ -12,7 +11,6 @@ export default function Home() {
     const scroll = useScrollPosition()
   
     createEffect(() => document.title = "Solid - Home")
-    createEffect(() => ScrollReveal().reveal('.headline'))
     createEffect(() => console.log(scroll()))
   
     // Example, to be implemented..
@@ -59,14 +57,9 @@ export default function Home() {
     };
   
     return (
-      <div style={{ height: '250vh' }}>
+      <div>
         <h1>Home Page</h1>
-        <nav style={{
-          display: 'flex',
-          gap: '1rem',
-          backgroundColor: '#ec5252',
-          height: '100vh'
-        }}>
+        <div>
           <Button onClick={() => setOpen(!open())}>{open() ? 'Hide' : 'Show'}</Button>
 
           <Show when={open()} fallback={<div>Hidden</div>}>
@@ -75,24 +68,8 @@ export default function Home() {
             </div>
           </Show>
 
-        </nav>
-  
-        <h1 class="headline">
-          Widget Inc.
-        </h1>
-        <h1 class="headline">
-          Widget Inc.
-        </h1>
-        <h1 class="headline">
-          Widget Inc.
-        </h1>
-        <h1 class="headline">
-          Widget Inc.
-        </h1>
-        <h1 class="headline">
-          Widget Inc.
-        </h1>
-  
+        </div>
+   
   
       </div>
     );

@@ -24,7 +24,6 @@
   "dependencies": {
     "@solidjs/router": "^0.4.3",
     "gsap": "^3.11.1",
-    "scrollreveal": "^4.0.9",
     "solid-js": "^1.5.5",
     "solid-styled-components": "^0.28.4"
   }
