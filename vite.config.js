@@ -16,6 +16,7 @@ export default defineConfig({
 		// or both out to improve performance:
 		// threads: false,
 		// isolate: false,
+		
 	},
 	resolve: {
 		conditions: ["development", "browser"],
